@@ -3,7 +3,11 @@ const button = document.querySelector("button");
 let bgNumber = backgroundNumber();
 
 button.addEventListener("click", () => {
-  bgNumber = backgroundNumber();
+  let newRandom = backgroundNumber();
+  while (newRandom === bgNumber) {
+    newRandom = backgroundNumber();
+  }
+  bgNumber = newRandom;
   getQuote(`background-${bgNumber}`);
 });
 
