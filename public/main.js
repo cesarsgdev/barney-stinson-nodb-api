@@ -10,7 +10,7 @@ button.addEventListener("click", () => {
 getQuote(`background-${bgNumber}`);
 
 function getQuote(background) {
-  fetch("http://localhost:8822/quote")
+  fetch("/quote")
     .then((response) => response.json())
     .then((result) => {
       if (background)
